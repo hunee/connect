@@ -5,7 +5,7 @@ Project structure:
 ```
 .
 ├── docker-compose.yaml
-├── flask
+├── uviron
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   └── server.py
