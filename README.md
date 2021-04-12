@@ -1,5 +1,5 @@
 ## Compose sample application
-### Python/Flask with Nginx proxy and MySQL database
+### Python/unicorn with Nginx proxy and MySQL database
 
 Project structure:
 ```
