@@ -1,0 +1,537 @@
+2021-04-15 05:01:57,845 INFO      uvicorn.error -: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-04-15 05:01:57,846 INFO      uvicorn.error -: Started reloader process [4030] using statreload
+2021-04-15 05:02:09,919 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:02:58,522 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:03:12,294 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:03:12,541 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:04:14,761 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:04:15,018 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:04:15,018 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:05:16,938 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:05:17,207 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:05:17,207 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:05:45,859 WARNING   uvicorn.error -: StatReload detected file change in 'app/__init__.py'. Reloading...
+2021-04-15 05:05:46,126 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:05:46,127 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:05:52,256 WARNING   uvicorn.error -: StatReload detected file change in 'app/__init__.py'. Reloading...
+2021-04-15 05:05:52,518 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:05:52,518 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:06:10,423 WARNING   uvicorn.error -: StatReload detected file change in 'app/__init__.py'. Reloading...
+2021-04-15 05:06:10,675 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:06:10,676 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:06:46,259 WARNING   uvicorn.error -: StatReload detected file change in 'app/__init__.py'. Reloading...
+2021-04-15 05:06:46,526 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:06:46,527 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:06:55,459 WARNING   uvicorn.error -: StatReload detected file change in 'app/__init__.py'. Reloading...
+2021-04-15 05:06:55,765 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:06:55,765 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:07:24,620 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:07:24,880 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:07:24,882 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:10:48,729 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:10:48,980 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:10:48,980 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:10:55,614 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:10:55,889 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:10:55,889 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:11:33,283 WARNING   uvicorn.error -: StatReload detected file change in 'app/__init__.py'. Reloading...
+2021-04-15 05:11:33,542 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:11:33,543 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:12:09,105 WARNING   uvicorn.error -: StatReload detected file change in 'app/__init__.py'. Reloading...
+2021-04-15 05:12:09,365 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:12:09,365 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:28:11,260 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:28:11,634 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:28:11,634 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:28:29,963 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:28:30,217 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:28:30,218 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:29:23,229 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:29:23,484 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:29:23,485 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:29:47,311 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:29:47,559 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:29:47,560 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:31:26,437 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:31:26,686 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:31:26,686 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:32:22,689 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:32:22,952 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:32:22,952 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:32:22,952 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:32:22,956 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306
+2021-04-15 05:33:22,608 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:33:22,884 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:33:22,884 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:33:22,885 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:34:36,135 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:34:36,397 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:34:36,397 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:34:36,397 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:34:36,400 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306
+2021-04-15 05:38:57,346 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:38:57,612 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:38:57,612 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:38:57,612 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:38:57,615 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306
+2021-04-15 05:38:57,616 INFO      app.config -: ->> DATABASE_NAME: staging
+2021-04-15 05:39:23,643 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:39:23,905 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:39:23,905 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:39:23,906 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:39:23,909 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306
+2021-04-15 05:39:23,909 INFO      app.config -: ->> DATABASE_NAME: staging
+2021-04-15 05:40:53,419 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:40:53,691 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:40:53,691 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:40:53,692 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:41:06,969 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:41:07,228 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:41:07,228 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:41:07,228 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:41:26,912 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:41:27,177 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:41:27,178 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:41:27,178 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:41:27,180 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:42:51,647 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:42:51,890 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:42:51,890 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:42:51,891 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:42:51,893 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:43:42,848 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:43:43,099 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:43:43,099 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:43:43,100 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:43:43,103 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:44:05,888 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:44:06,124 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:44:06,124 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:44:06,124 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:44:06,128 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:44:19,692 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:44:19,944 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:44:19,944 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:44:19,944 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:44:19,948 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:44:51,683 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:44:51,929 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:44:51,929 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:44:51,930 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:44:51,933 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:45:32,097 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:45:32,346 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:45:32,347 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:45:32,347 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:45:32,350 INFO      app.config -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:46:09,938 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:46:10,212 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:46:10,212 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:46:10,212 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:46:25,551 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:46:25,814 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:46:25,817 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:46:25,823 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:46:58,766 WARNING   uvicorn.error -: StatReload detected file change in 'app/config.py'. Reloading...
+2021-04-15 05:46:59,042 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:46:59,043 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:46:59,043 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:47:08,503 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:47:08,750 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:47:08,750 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:47:08,750 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:47:09,179 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:48:15,856 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:48:16,127 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:48:16,128 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:48:16,128 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:48:16,539 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:48:25,306 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/battle.py'. Reloading...
+2021-04-15 05:48:25,564 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:48:25,564 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:48:25,565 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:48:26,066 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:48:36,788 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/user.py'. Reloading...
+2021-04-15 05:48:37,035 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:48:37,035 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:48:37,035 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:48:37,480 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:48:37,524 INFO      app.models.user -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:48:37,536 INFO      connect.routing -: Registering API -> 'add_user' from app.api.api_user
+2021-04-15 05:48:37,537 INFO      connect.routing -: Registering API -> 'del_user2' from app.api.api_user
+2021-04-15 05:48:37,537 INFO      connect.routing -: Registering API -> 'del_user' from app.api.api_user
+2021-04-15 05:48:37,539 INFO      connect.routing -: Registering API -> 'ren_user' from app.api.api_ren_user
+2021-04-15 05:48:37,539 INFO      app.main -: $$$ ---------- START SERVER ----------
+2021-04-15 05:48:37,540 INFO      uvicorn.error -: Started server process [6345]
+2021-04-15 05:48:37,540 INFO      uvicorn.error -: Waiting for application startup.
+2021-04-15 05:48:37,543 INFO      uvicorn.error -: Application startup complete.
+2021-04-15 05:48:37,544 ERROR     asyncio -: Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<connect() done, defined at /Users/jangjeonghun/Documents/My Projects/connect/backend/app/models/user.py:75> exception=OperationalError('(pymysql.err.OperationalError) (2003, "Can\'t connect to MySQL server on \'127.0.0.1\'")')>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 486, in _connect
+    self._reader, self._writer = await \
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/tasks.py", line 442, in wait_for
+    return await fut
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "uvloop/loop.pyx", line 2017, in create_connection
+  File "uvloop/loop.pyx", line 1994, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 559, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/mysql/aiomysql.py", line 263, in connect
+    await_only(self.aiomysql.connect(*arg, **kw)),
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 61, in await_only
+    return current.driver.switch(awaitable)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 114, in greenlet_spawn
+    value = await result
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 75, in _connect
+    await conn._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 521, in _connect
+    raise OperationalError(2003,
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jangjeonghun/Documents/My Projects/connect/backend/app/models/user.py", line 78, in connect
+    async with engine.begin() as conn:
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/base.py", line 15, in __aenter__
+    return await self.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 522, in start
+    await self.conn.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 111, in start
+    self.sync_connection = await (greenlet_spawn(self.sync_engine.connect))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 119, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 438, in connect
+    return super(Engine, self).connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3144, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2003, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 559, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/mysql/aiomysql.py", line 263, in connect
+    await_only(self.aiomysql.connect(*arg, **kw)),
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 61, in await_only
+    return current.driver.switch(awaitable)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 114, in greenlet_spawn
+    value = await result
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 75, in _connect
+    await conn._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 521, in _connect
+    raise OperationalError(2003,
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1'")
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-04-15 05:48:37,575 ERROR     asyncio -: Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<connect() done, defined at /Users/jangjeonghun/Documents/My Projects/connect/backend/app/models/battle.py:75> exception=OperationalError('(pymysql.err.OperationalError) (2003, "Can\'t connect to MySQL server on \'127.0.0.1\'")')>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 486, in _connect
+    self._reader, self._writer = await \
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/tasks.py", line 442, in wait_for
+    return await fut
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "uvloop/loop.pyx", line 2017, in create_connection
+  File "uvloop/loop.pyx", line 1994, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 559, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/mysql/aiomysql.py", line 263, in connect
+    await_only(self.aiomysql.connect(*arg, **kw)),
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 61, in await_only
+    return current.driver.switch(awaitable)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 114, in greenlet_spawn
+    value = await result
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 75, in _connect
+    await conn._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 521, in _connect
+    raise OperationalError(2003,
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jangjeonghun/Documents/My Projects/connect/backend/app/models/battle.py", line 79, in connect
+    async with engine.begin() as conn:
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/base.py", line 15, in __aenter__
+    return await self.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 522, in start
+    await self.conn.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 111, in start
+    self.sync_connection = await (greenlet_spawn(self.sync_engine.connect))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 119, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 438, in connect
+    return super(Engine, self).connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3144, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2003, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 559, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/mysql/aiomysql.py", line 263, in connect
+    await_only(self.aiomysql.connect(*arg, **kw)),
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 61, in await_only
+    return current.driver.switch(awaitable)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 114, in greenlet_spawn
+    value = await result
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 75, in _connect
+    await conn._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/aiomysql/connection.py", line 521, in _connect
+    raise OperationalError(2003,
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1'")
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-04-15 05:59:49,404 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/user.py'. Reloading...
+2021-04-15 05:59:49,494 INFO      uvicorn.error -: Shutting down
+2021-04-15 05:59:49,600 INFO      uvicorn.error -: Waiting for application shutdown.
+2021-04-15 05:59:49,601 INFO      uvicorn.error -: Application shutdown complete.
+2021-04-15 05:59:49,601 INFO      uvicorn.error -: Finished server process [6345]
+2021-04-15 05:59:50,004 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 05:59:50,004 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 05:59:50,005 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 05:59:50,610 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:59:50,676 INFO      app.models.user -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 05:59:50,689 INFO      connect.routing -: Registering API -> 'add_user' from app.api.api_user
+2021-04-15 05:59:50,689 INFO      connect.routing -: Registering API -> 'del_user2' from app.api.api_user
+2021-04-15 05:59:50,689 INFO      connect.routing -: Registering API -> 'del_user' from app.api.api_user
+2021-04-15 05:59:50,692 INFO      connect.routing -: Registering API -> 'ren_user' from app.api.api_ren_user
+2021-04-15 05:59:50,696 INFO      app.main -: $$$ ---------- START SERVER ----------
+2021-04-15 05:59:50,698 INFO      uvicorn.error -: Started server process [6601]
+2021-04-15 05:59:50,698 INFO      uvicorn.error -: Waiting for application startup.
+2021-04-15 05:59:50,710 INFO      uvicorn.error -: Application startup complete.
+2021-04-15 06:01:27,311 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/__init__.py'. Reloading...
+2021-04-15 06:01:27,344 INFO      uvicorn.error -: Shutting down
+2021-04-15 06:01:27,445 INFO      uvicorn.error -: Waiting for application shutdown.
+2021-04-15 06:01:27,445 INFO      uvicorn.error -: Application shutdown complete.
+2021-04-15 06:01:27,445 INFO      uvicorn.error -: Finished server process [6601]
+2021-04-15 06:01:27,782 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 06:01:27,783 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 06:01:27,784 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 06:01:28,227 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:01:28,269 INFO      app.models.user -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:01:28,281 INFO      connect.routing -: Registering API -> 'add_user' from app.api.api_user
+2021-04-15 06:01:28,281 INFO      connect.routing -: Registering API -> 'del_user2' from app.api.api_user
+2021-04-15 06:01:28,281 INFO      connect.routing -: Registering API -> 'del_user' from app.api.api_user
+2021-04-15 06:01:28,282 INFO      connect.routing -: Registering API -> 'ren_user' from app.api.api_ren_user
+2021-04-15 06:01:28,282 INFO      app.main -: $$$ ---------- START SERVER ----------
+2021-04-15 06:01:28,283 INFO      uvicorn.error -: Started server process [6683]
+2021-04-15 06:01:28,283 INFO      uvicorn.error -: Waiting for application startup.
+2021-04-15 06:01:28,287 INFO      uvicorn.error -: Application startup complete.
+2021-04-15 06:01:43,871 WARNING   uvicorn.error -: StatReload detected file change in 'app/models/__init__.py'. Reloading...
+2021-04-15 06:01:43,968 INFO      uvicorn.error -: Shutting down
+2021-04-15 06:01:44,068 INFO      uvicorn.error -: Waiting for application shutdown.
+2021-04-15 06:01:44,068 INFO      uvicorn.error -: Application shutdown complete.
+2021-04-15 06:01:44,069 INFO      uvicorn.error -: Finished server process [6683]
+2021-04-15 06:01:44,398 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 06:01:44,398 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 06:01:44,399 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 06:01:44,820 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:01:44,860 INFO      app.models.user -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:01:44,868 INFO      connect.routing -: Registering API -> 'add_user' from app.api.api_user
+2021-04-15 06:01:44,868 INFO      connect.routing -: Registering API -> 'del_user2' from app.api.api_user
+2021-04-15 06:01:44,868 INFO      connect.routing -: Registering API -> 'del_user' from app.api.api_user
+2021-04-15 06:01:44,870 INFO      connect.routing -: Registering API -> 'ren_user' from app.api.api_ren_user
+2021-04-15 06:01:44,870 INFO      app.main -: $$$ ---------- START SERVER ----------
+2021-04-15 06:01:44,870 INFO      uvicorn.error -: Started server process [6703]
+2021-04-15 06:01:44,871 INFO      uvicorn.error -: Waiting for application startup.
+2021-04-15 06:01:44,872 INFO      uvicorn.error -: Application startup complete.
+2021-04-15 06:03:27,523 WARNING   uvicorn.error -: StatReload detected file change in 'app/main.py'. Reloading...
+2021-04-15 06:03:27,605 INFO      uvicorn.error -: Shutting down
+2021-04-15 06:03:27,708 INFO      uvicorn.error -: Waiting for application shutdown.
+2021-04-15 06:03:27,709 INFO      uvicorn.error -: Application shutdown complete.
+2021-04-15 06:03:27,710 INFO      uvicorn.error -: Finished server process [6703]
+2021-04-15 06:03:28,031 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 06:03:28,031 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 06:03:28,031 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 06:03:28,435 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:03:28,474 INFO      app.models.user -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:03:28,483 INFO      connect.routing -: Registering API -> 'add_user' from app.api.api_user
+2021-04-15 06:03:28,483 INFO      connect.routing -: Registering API -> 'del_user2' from app.api.api_user
+2021-04-15 06:03:28,484 INFO      connect.routing -: Registering API -> 'del_user' from app.api.api_user
+2021-04-15 06:03:28,484 INFO      connect.routing -: Registering API -> 'ren_user' from app.api.api_ren_user
+2021-04-15 06:03:28,485 INFO      app.main -: $$$ ---------- START SERVER ----------
+2021-04-15 06:03:28,485 INFO      uvicorn.error -: Started server process [6823]
+2021-04-15 06:03:28,485 INFO      uvicorn.error -: Waiting for application startup.
+2021-04-15 06:03:28,488 INFO      uvicorn.error -: Application startup complete.
+2021-04-15 06:10:21,679 WARNING   uvicorn.error -: StatReload detected file change in 'connect/jwt.py'. Reloading...
+2021-04-15 06:10:21,717 INFO      uvicorn.error -: Shutting down
+2021-04-15 06:10:21,822 INFO      uvicorn.error -: Waiting for application shutdown.
+2021-04-15 06:10:21,823 INFO      uvicorn.error -: Application shutdown complete.
+2021-04-15 06:10:21,824 INFO      uvicorn.error -: Finished server process [6823]
+2021-04-15 06:10:22,310 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 06:10:22,315 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 06:10:22,315 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 06:10:22,847 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:10:22,891 INFO      app.models.user -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:10:22,901 INFO      connect.routing -: Registering API -> 'add_user' from app.api.api_user
+2021-04-15 06:10:22,901 INFO      connect.routing -: Registering API -> 'del_user2' from app.api.api_user
+2021-04-15 06:10:22,901 INFO      connect.routing -: Registering API -> 'del_user' from app.api.api_user
+2021-04-15 06:10:22,902 INFO      connect.routing -: Registering API -> 'ren_user' from app.api.api_ren_user
+2021-04-15 06:10:22,902 INFO      app.main -: $$$ ---------- START SERVER ----------
+2021-04-15 06:10:22,903 INFO      uvicorn.error -: Started server process [6982]
+2021-04-15 06:10:22,903 INFO      uvicorn.error -: Waiting for application startup.
+2021-04-15 06:10:22,905 INFO      uvicorn.error -: Application startup complete.
+2021-04-15 06:56:06,258 WARNING   uvicorn.error -: StatReload detected file change in 'connect/jwt.py'. Reloading...
+2021-04-15 06:56:06,340 INFO      uvicorn.error -: Shutting down
+2021-04-15 06:56:06,449 INFO      uvicorn.error -: Waiting for application shutdown.
+2021-04-15 06:56:06,450 INFO      uvicorn.error -: Application shutdown complete.
+2021-04-15 06:56:06,450 INFO      uvicorn.error -: Finished server process [6982]
+2021-04-15 06:56:06,974 INFO      app.config -: ->> APPLICATION_PATH: /Users/jangjeonghun/Documents/My Projects/connect/backend
+2021-04-15 06:56:06,974 INFO      app.config -: ->> APPLICATION_DIR: /Users/jangjeonghun/Documents/My Projects/connect/backend/app
+2021-04-15 06:56:06,975 INFO      app.config -: ->> APPLICATION_ENV: development
+2021-04-15 06:56:07,616 INFO      app.models.battle -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:56:07,693 INFO      app.models.user -: ->> DATABASE_URL: mysql+aiomysql://root:db-78n9n@127.0.0.1:3306/staging
+2021-04-15 06:56:07,703 INFO      connect.routing -: Registering API -> 'add_user' from app.api.api_user
+2021-04-15 06:56:07,704 INFO      connect.routing -: Registering API -> 'del_user2' from app.api.api_user
+2021-04-15 06:56:07,705 INFO      connect.routing -: Registering API -> 'del_user' from app.api.api_user
+2021-04-15 06:56:07,708 INFO      connect.routing -: Registering API -> 'ren_user' from app.api.api_ren_user
+2021-04-15 06:56:07,708 INFO      app.main -: $$$ ---------- START SERVER ----------
+2021-04-15 06:56:07,711 INFO      uvicorn.error -: Started server process [7660]
+2021-04-15 06:56:07,711 INFO      uvicorn.error -: Waiting for application startup.
+2021-04-15 06:56:07,731 INFO      uvicorn.error -: Application startup complete.
