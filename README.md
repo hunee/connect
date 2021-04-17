@@ -1,5 +1,5 @@
 ## Compose sample application
-### Python/unicorn with Nginx proxy and MySQL database
+### Python/uvicorn with Nginx proxy and MySQL database
 
 Project structure:
 ```

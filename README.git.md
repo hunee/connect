@@ -15,3 +15,5 @@ __pycache__/
 **/._.DS_Store
 
 $ git config --global core.excludesfile ~/.gitignore_global
+$ git push
+$ git pull
