@@ -1,10 +1,3 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-backend/.DS_Store
-.DS_Store
 backend/connect/__pycache__/__init__.cpython-39.pyc
 backend/connect/__pycache__/applications.cpython-39.pyc
 backend/connect/__pycache__/config.cpython-39.pyc
