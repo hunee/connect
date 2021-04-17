@@ -21,12 +21,17 @@ from sqlalchemy.orm import sessionmaker
 
 
 #from ..config import config
-import app
+from app.config import config, get_database_url
 
-mysql = app.env['mysql']
+import logging
 
-#engine = create_async_engine("mysql+aiomysql://user:pass@hostname/dbname")
-DATABASE_URL = '{0}/{1}'.format(app.env['DATABASE_URL'], mysql['database'])
+###
+logger = logging.getLogger(__name__)
+
+# engine is an instance of AsyncEngine
+DATABASE_URL = get_database_url(config('mysql'))
+logger.info('->> DATABASE_URL: ' + DATABASE_URL)
+
 engine = create_async_engine(DATABASE_URL, connect_args={'auth_plugin': 'mysql_native_password'})#, echo=True)
 
 # expire_on_commit=False will prevent attributes from being expired

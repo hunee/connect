@@ -10,10 +10,10 @@ import sys
 import connect
 
 
-from . import api
-from . import models
+from app import api
+from app import models
 
-from .models import user
+from app.models import user
 
 
 ###
