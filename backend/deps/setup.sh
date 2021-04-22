@@ -1,42 +1,81 @@
 #!/usr/bin/env bash
 
+
+upgrade() {
+  
+  fullpath="$1"
+  filename="${fullpath##*/}"                      # Strip longest match of */ from start
+  dir="${fullpath:0:${#fullpath} - ${#filename}}" # Substring from 0 thru pos of filename
+  base="${filename%.[^.]*}"                       # Strip shortest match of . plus at least one non-dot char from end
+  ext="${filename:${#base} + 1}"                  # Substring from len of base thru end
+  if [[ -z "$base" && -n "$ext" ]]; then          # If we have an extension and no base, it's really the base
+      base=".$ext"
+      ext=""
+  fi
+  #echo -e "$fullpath:\n\tdir  = \"$dir\"\n\tbase = \"$base\"\n\text  = \"$ext\""
+
+  echo "->> upgrade: $fullpath"
+
+  # look for empty dir 
+  if [ -d "$base" ]
+  then
+    cd $base
+      git pull
+      pip3 install .
+    cd ..
+  else
+    git clone $fullpath --recurse-submodules
+    pip3 install ./$base
+  fi
+  # rest of the logic
+
+  return 1
+}
+
+#pip3 install wheel
+
 #pip3 install cffi
-#pip3 install sqlalchemy
-#pip3 install cython
-git clone https://github.com/cython/cython
-#git clone https://github.com/cython/cython
 
-#git clone https://github.com/aio-libs/yarl
-
-#git clone https://github.com/aio-libs/multidict
-#git clone https://github.com/chardet/chardet
-#git clone https://github.com/aio-libs/async_timeout
+#pip3 uninstall cython
+upgrade https://github.com/cython/cython
 
 
-git clone https://github.com/aio-libs/aiohttp
-#git clone https://github.com/aio-libs/aiohttp-debugtoolbar
-#git clone https://github.com/aio-libs/aiohttp-security
-#git clone https://github.com/aio-libs/aiohttp_admin
-#git clone https://github.com/aio-libs/aiohttp-session
-#git clone https://github.com/aio-libs/aiohttp-jinja2
-#git clone https://github.com/aio-libs/aiohttp-mako
+#result=$?
+#echo "upgrade [ ${result} ]"
+
+##pip3 uninstall ujson
+upgrade https://github.com/ultrajson/ultrajson
+
+##pip3 uninstall PyYAML
+upgrade https://github.com/yaml/pyyaml
+
+##pip3 uninstall uvloop
+upgrade https://github.com/MagicStack/uvloop
+
+upgrade https://github.com/aaugustin/websockets
+
+##pip3 uninstall uvicorn
+upgrade https://github.com/encode/uvicorn
+
+#pip3 uninstall requests
+upgrade https://github.com/psf/requests
+
+upgrade https://github.com/encode/starlette
+upgrade https://github.com/tiangolo/fastapi
 
 
-git clone https://github.com/aio-libs/aiomysql
-git clone https://github.com/aio-libs/aioredis-py
-#git clone https://github.com/aio-libs/aiomcache
-#git clone https://github.com/aio-libs/aiobotocore
-#git clone https://github.com/aio-libs/aiorwlock
-#git clone https://github.com/aio-libs/aiosmtpd
+upgrade https://github.com/aio-libs/aiomysql
+upgrade https://github.com/aio-libs/aioredis-py
 
-git clone https://github.com/aaugustin/websockets
-#git clone https://github.com/aio-libs/janus
-#git clone https://github.com/yaml/pyyaml
+upgrade https://github.com/MagicStack/asyncpg
 
-git clone https://github.com/encode/uvicorn
-git clone https://github.com/encode/starlette
-git clone https://github.com/tiangolo/fastapi
+#pip3 uninstall sqlalchemy
+upgrade https://github.com/sqlalchemy/sqlalchemy
 
-git clone https://github.com/sqlalchemy/sqlalchemy/
 
-git clone https://github.com/nackjicholson/aiosql
+upgrade https://github.com/nackjicholson/aiosql
+
+
+pip3 install aiohttp
+##upgrade https://github.com/aio-libs/aiohttp
+
