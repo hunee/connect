@@ -9,7 +9,7 @@ import requests
 import aioredis
 
 ###
-import connect
+import message
 
 from app.config import config, get_redis_url
 from app.models import user
@@ -21,7 +21,7 @@ pool = aioredis.ConnectionPool.from_url(REDIS_URL, max_connections=4)
 
 #curl -d '{"api":"add_user", "args":{"type":"a", "text":"b"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
-@connect.method
+@message.method
 #async def add_user(json_data: Any) -> typing.Callable:
 async def add_user_1(args: typing.Any) -> typing.Callable:   
     async with aiohttp.ClientSession(
@@ -37,7 +37,7 @@ async def add_user_1(args: typing.Any) -> typing.Callable:
 
 #curl -d '{"api":"del_user2", "args":{"type":"a", "text":"b", "trash":"true"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
-@connect.method
+@message.method
 async def add_user_2(args: typing.Any):
     print('API: del_user: ', args['text'])  
 
@@ -51,7 +51,7 @@ async def add_user_2(args: typing.Any):
 
 
 #curl -d '{"api":"del_user", "args":{"type":"a", "text":"b", "trash":"true"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
-@connect.method
+@message.method
 async def add_user(args: typing.Any):
     print('====================< del_user: ', args['text'])  
 

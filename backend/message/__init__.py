@@ -5,7 +5,7 @@ __version__ = '0.0.1'
 
 
 ###
-from .applications import postapi
+from .applications import post
 from .config import Config
 
 from .message import method

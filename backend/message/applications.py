@@ -40,7 +40,7 @@ async def app_get_put(scope, receive, send):
     })
 
 
-class postapi():
+class post():
     def __init__(self, debug: bool = False) -> None:
         pass
 

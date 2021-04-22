@@ -10,7 +10,7 @@ import pathlib
 import sys
 
 
-from connect import Config
+from message import Config
 
 
 ###
