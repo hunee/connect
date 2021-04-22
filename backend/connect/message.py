@@ -9,25 +9,19 @@ import ujson
 ####
 logger = logging.getLogger(__name__)
 
-api_dict = dict()
+_msg_methods = dict()
 
-def method():
-    pass
-
-def property():
-    pass
-
-def api(func: typing.Callable) -> typing.Callable:
+def method(func: typing.Callable) -> typing.Callable:
     #module = func.__module__.split(".")[-1]
     #key = module + "." + func.__name__
     key = func.__name__
-    logger.info("Registering API -> '" + key + "' from " + func.__module__)
+    logger.info("->> method -> '" + key + "' from " + func.__module__)
 
-    api_dict[key] = func
+    _msg_methods[key] = func
     return func
 
 '''
-def api_(id: str) -> Callable[[DecoratedCallable], DecoratedCallable]:
+def id_(id: str) -> Callable[[DecoratedCallable], DecoratedCallable]:
     def decorator(func: DecoratedCallable) -> DecoratedCallable:
         print(">> pid: '" + id + "' from " + func.__module__)
 
@@ -38,23 +32,18 @@ def api_(id: str) -> Callable[[DecoratedCallable], DecoratedCallable]:
     return decorator
 '''
 
-#curl -d '{"api":"del_user", "args":{"type":"a", "text":"b", "trash":"true"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
-'''
-body[api] =
-body[args] =
-'''
-async def run_api(body: typing.Any) -> typing.Any:
+async def run_body(body: typing.Any) -> typing.Any:
     result = {}
 
     try:
-        api = body["api"]
+        method = body["method"]
         args = body["args"]
 
-        result = await api_dict[api](args)
+        result = await _msg_methods[method](args)
     
     except Exception as e:
         text = str(type(e).__name__ + " " + str(e))
-        result['api'] = 'api'
+        result['method'] = 'run_body()'
         result['args'] = text
 
         logger.exception("Unhandled exception: " + text)

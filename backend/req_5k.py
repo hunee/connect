@@ -5,7 +5,7 @@ import requests
 
 url = "http://localhost:5000"
 header = {"Accept-Encoding": "gzip,deflate", "Content-Type":"application/json"}
-data = '{"api":"add_user", "args":{"type":"a", "text":"b"}}'
+data = '{"method":"add_user", "args":{"type":"a", "text":"b"}}'
 
 
 async def main():

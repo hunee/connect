@@ -19,7 +19,7 @@ from app.models import user
 ###
 logger = logging.getLogger(__name__)
 
-class server(connect.Post):
+class server(connect.postapi):
     def __init__(self, debug: bool = False) -> None:
         logger.info('$$$ ---------- START SERVER ----------')
         

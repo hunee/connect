@@ -12,13 +12,13 @@ import connect
 
 
 #from ..models import user
-from .. import models
+from app.models import user
 
 logger = logging.getLogger(__name__)
 
 #curl -d '{"api":"ren_user", "args":{"type":"a", "text":"b"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
-@connect.api
+@connect.method
 #async def add_user(json_data: Any) -> typing.Callable:
 async def ren_user(args: typing.Any) -> typing.Callable:   
     async with aiohttp.ClientSession(

@@ -5,8 +5,8 @@ __version__ = '0.0.1'
 
 
 ###
-from .applications import Post
+from .applications import postapi
 from .config import Config
 
-from .routing import api
+from .message import method
 

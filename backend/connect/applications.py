@@ -8,7 +8,7 @@ import ujson
 
 from starlette.types import ASGIApp, Receive, Scope, Send
 
-from .routing import run_api
+from .message import run_body
 
 ###
 logger = logging.getLogger(__name__)
@@ -40,7 +40,7 @@ async def app_get_put(scope, receive, send):
     })
 
 
-class Post():
+class postapi():
     def __init__(self, debug: bool = False) -> None:
         pass
 
@@ -64,6 +64,13 @@ class Post():
         assert scope["type"] in ("http", "websocket")
         assert scope["method"] == "POST"
 
+        ###
+        logger.info('->> scope: ' + str(scope))
+
+        ###headers = dict(scope['headers'])
+        ###logger.info('->> headers: ' + str(headers))
+        ###logger.info('->> headers[authorization]: ' + str(headers[b'authorization']))
+
         """
         Echo the request body back in an HTTP response.
         """
@@ -71,45 +78,39 @@ class Post():
         if body == b'':
             return
 
-        headers = dict(scope['headers'])
-
-        logger.info('headers: ' + str(headers))
-        logger.info('->> headers[authorization]: ' + str(headers[b'authorization']))
-
-        logger.info('->> scope: ' + str(scope))
         logger.info('->> body: ' + str(body))
         
 
+        ###
         result = {}
 
         try:
             json_body = ujson.loads(body)
             
-            result = await run_api(json_body)
+            result = await run_body(json_body)
+
+            send_json_str = ujson.dumps(result)
+            logger.info('<<- send_json_str: ' + send_json_str)
 
         except Exception as e:
             msg = str(type(e).__name__ + " " + str(e))  
-            result['api'] = 'api'
+            result['method'] = 'postapi()'
             result['args'] = 'args'
 
             logger.exception("Unhandled exception: " + msg)
             #raise
               
-        send_json_str = ujson.dumps(result)
-        logger.info('<<- send_json_str: ' + send_json_str)
-
-        '''
-        '''
-        await send({
-            'type': 'http.response.start',
-            'status': 200,
-            'headers': [
-                [b'content-type', b'application/json'],
-            ]
-        })
-        await send({
-            'type': 'http.response.body',
-            'body': send_json_str.encode('utf-8'),
-        })    
+        finally:
+            await send({
+                'type': 'http.response.start',
+                'status': 200,
+                'headers': [
+                    [b'content-type', b'application/json'],
+                ]
+            })
+            await send({
+                'type': 'http.response.body',
+                'body': send_json_str.encode('utf-8'),
+            })    
 
 

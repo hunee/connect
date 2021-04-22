@@ -1,5 +1,5 @@
 #
-# Asyncio POST / HTTP/1.1/ WEB server
+# Asyncio "POST / HTTP/1.1" WEB server
 #
 
 - backend
@@ -12,7 +12,6 @@
     - body parser
       - json
       - routing
-      - gzip - ???
 
   - nodejs
     - "POST / HTTP/1.1"
