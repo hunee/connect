@@ -17,6 +17,8 @@ from .. import models
 
 logger = logging.getLogger(__name__)
 
+pool = aioredis.ConnectionPool.from_url('redis://localhost', max_connections=4)
+
 #curl -d '{"api":"add_user", "args":{"type":"a", "text":"b"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
 @connect.api
@@ -53,15 +55,10 @@ async def add_user_2(args: typing.Any):
 async def add_user(args: typing.Any):
     print('====================< del_user: ', args['text'])  
 
-    #await models.user.add_user()
-    pool = await aioredis.create_pool(
-        'redis://localhost',
-        minsize=5, maxsize=10)
-
-
-    await pool.execute('set', 'my-key', 'value')
-    val = await pool.execute('get', 'my-key')
-    print('raw value:', val)
+    async with aioredis.Redis(connection_pool=pool) as conn:
+        await conn.set("life", 420)
+        life = await conn.get('life')
+        print(f"The answer: {life}")
 
     return args
 

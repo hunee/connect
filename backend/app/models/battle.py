@@ -158,8 +158,9 @@ async def connect():
         # the default result object is the
         # sqlalchemy.engine.Result object
         #result = await conn.execute(sa.text("SHOW DATABASES;"))
+        name = '2'
         stmt = (
-            계정_정보.select().where(계정_정보.c.사용자 =='2')
+            계정_정보.select().where(계정_정보.c.사용자 == name)
         )
         #stmt = sa.text('SELECT * FROM 계정_정보 WHERE 사용자 = "2";')
         print('SQL: ' + str(stmt))
@@ -183,6 +184,7 @@ async def connect():
 
         result = await conn.execute(stmt)
         print('result.rowcount: ' , result.rowcount)
+        
         
 
         await conn.commit()
