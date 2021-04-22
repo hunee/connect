@@ -19,7 +19,7 @@ from app.models import user
 ###
 logger = logging.getLogger(__name__)
 
-class server(connect.Connect):
+class server(connect.Post):
     def __init__(self, debug: bool = False) -> None:
         logger.info('$$$ ---------- START SERVER ----------')
         
@@ -28,6 +28,8 @@ class server(connect.Connect):
         asyncio.ensure_future(user.connect())
         asyncio.ensure_future(models.battle_connect())
 
+def main():
+    app = server(debug=True)
+    return app
 
-papp = server(debug=True)
-app = connect.GZipMiddleware(papp)
+app = main()

@@ -1,8 +1,10 @@
 #print('__FILE__: ', __file__)
 
+import argparse
+
 import uvicorn
 
-import argparse
+
 
 ###
 ARGS = argparse.ArgumentParser(description="Run web server.")
@@ -12,6 +14,7 @@ ARGS.add_argument(
 ARGS.add_argument(
         '--port', action="store", dest='port',
         default=8000, type=int, help='Port number')
+
 
 ###
 if __name__ == '__main__':

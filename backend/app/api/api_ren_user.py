@@ -1,33 +1,11 @@
 #print('__FILE__: ', __file__)
 
 import typing
-
-from typing import (
-    Any,
-    Callable,
-    Coroutine,
-    Dict,
-    List,
-    Optional,
-    Sequence,
-    Set,
-    Type,
-    Union,
-)
-
-from connect.types import (
-    ASGIApp,
-    Receive,
-    Scope,
-    Send,
-    DecoratedCallable
-)
-
 import logging
-import traceback
 
 import aiohttp
 import requests
+
 
 ###
 import connect
@@ -42,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 @connect.api
 #async def add_user(json_data: Any) -> typing.Callable:
-async def ren_user(args: Any) -> typing.Callable:   
+async def ren_user(args: typing.Any) -> typing.Callable:   
     async with aiohttp.ClientSession(
         auth=aiohttp.BasicAuth('user', 'pass')
     ) as session:

@@ -1,37 +1,12 @@
 #print('__FILE__: ', __file__)
 
 #
-import typing
-
-from typing import (
-    Any,
-    Callable,
-    Coroutine,
-    Dict,
-    List,
-    Optional,
-    Sequence,
-    Set,
-    Type,
-    Union,
-)
-
-from .types import (
-    ASGIApp, #
-    Receive,
-    Scope,
-    Send,
-    DecoratedCallable, # fastapi
-)
-
-
 import logging
-import traceback
-import sys
+import typing
 
 import ujson
 
-
+####
 logger = logging.getLogger(__name__)
 
 api_dict = dict()
@@ -42,7 +17,7 @@ def method():
 def property():
     pass
 
-def api(func: DecoratedCallable) -> DecoratedCallable:
+def api(func: typing.Callable) -> typing.Callable:
     #module = func.__module__.split(".")[-1]
     #key = module + "." + func.__name__
     key = func.__name__
@@ -68,7 +43,7 @@ def api_(id: str) -> Callable[[DecoratedCallable], DecoratedCallable]:
 body[api] =
 body[args] =
 '''
-async def run_api(body: Any) -> Any:
+async def run_api(body: typing.Any) -> typing.Any:
     result = {}
 
     try:

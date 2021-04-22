@@ -5,9 +5,8 @@ __version__ = '0.0.1'
 
 
 ###
-from .applications import Connect
+from .applications import Post
 from .config import Config
 
 from .routing import api
 
-from .gzip import GZipMiddleware

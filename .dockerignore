@@ -5,6 +5,7 @@ __pycache__
 .Python
 *.log
 .git*
+deps
 scripts
 postman
 ./postgres-data

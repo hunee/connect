@@ -1,6 +1,7 @@
 #print('__FILE__: ', __file__)
 
 import asyncio
+import logging
 
 import sqlalchemy as sa
 
@@ -23,7 +24,6 @@ from sqlalchemy.orm import sessionmaker
 #from ..config import config
 from app.config import config, get_database_url
 
-import logging
 
 ###
 logger = logging.getLogger(__name__)
@@ -64,30 +64,49 @@ class B(Base):
 
 class ACOUNT(Base):
     __tablename__ = "acount"
-    id_pkey = Column(Integer, primary_key=True)
-    user = Column(String(20), unique=True)
+    __table_args__ = (
+        #{'mysql_collate': 'utf8_general_ci'},
+        {'mysql_engine':'InnoDB',
+        'mysql_partitions':'16',
+        'mysql_partition_by':'LINEAR HASH(id)'}
+    )
+
+    id = Column(Integer, primary_key=True)
+    user = Column(String(20))
     password = Column(String(20), index=True)
     create_date = Column(DateTime, server_default=func.now())
-    user_id = Column(ForeignKey("a.id"))
+    #user_id = Column(ForeignKey("a.id"))
+    bid = Column(String(20))
+    foo = Column(String(20))
     user_index = Column(String(20), index=True)
     user_index2 = Column(String(20), index=True)
+
+class ACCOUNT(Base):
+    __tablename__ = "account"
+
+    id = Column(Integer, primary_key=True)
+    user = Column(String(20))
+    password = Column(String(20))
+    create_date = Column(DateTime, server_default=func.now())
 
 async def connect():
     print('------------ connect')
 
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.drop_all)
-        await conn.run_sync(Base.metadata.create_all)
+    #pass
+
+    #async with engine.begin() as conn:
+    #    await conn.run_sync(Base.metadata.drop_all)
+    #    await conn.run_sync(Base.metadata.create_all)
 
 async def add_user():
     async with async_session() as session:
         async with session.begin():
             session.add_all(
             [
-                A(bs=[B(), B()], data="a1"),
-                A(bs=[B()], data="a2"),
-                A(bs=[B(), B()], data="a3"),
-                ACOUNT(user="a", password="b")
+                #A(bs=[B(), B()], data="a1"),
+                #A(bs=[B()], data="a2"),
+                #A(bs=[B(), B()], data="a3"),
+                ACCOUNT(user="a", password="b")
             ]
             )
 

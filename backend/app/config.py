@@ -3,14 +3,15 @@ __version__ = '0.0.1'
 #print('__FILE__: ', __file__)
 #print('__VERSION__: ', __version__)
 
+import logging
+
 import os
 import pathlib
-
 import sys
+
 
 from connect import Config
 
-import logging
 
 ###
 logger = logging.getLogger(__name__)

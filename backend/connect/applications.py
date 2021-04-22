@@ -1,41 +1,16 @@
 #print('__FILE__: ', __file__)
 
-import typing
-
-from typing import (
-    Any,
-    Callable,
-    Coroutine,
-    Dict,
-    List,
-    Optional,
-    Sequence,
-    Set,
-    Type,
-    Union,
-)
-
-from .types import (
-    ASGIApp,
-    Receive,
-    Scope,
-    Send,
-    DecoratedCallable
-)
-
 import asyncio
-
 import logging
-import traceback
-import sys
+import typing
 
 import ujson
 
+from starlette.types import ASGIApp, Receive, Scope, Send
 
-###
 from .routing import run_api
 
-
+###
 logger = logging.getLogger(__name__)
 
 async def app_get_put(scope, receive, send):
@@ -65,11 +40,11 @@ async def app_get_put(scope, receive, send):
     })
 
 
-class Connect():
+class Post():
     def __init__(self, debug: bool = False) -> None:
         pass
 
-    async def read_body(self, receive: Receive) -> str:
+    async def _read_body(self, receive: Receive) -> bytes:
         """
         Read and return the entire body from an incoming ASGI message.
         """
@@ -86,15 +61,25 @@ class Connect():
     async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
         #print('scope: ', scope)
 
+        assert scope["type"] in ("http", "websocket")
+        assert scope["method"] == "POST"
+
         """
         Echo the request body back in an HTTP response.
         """
-        body = await self.read_body(receive)
+        body = await self._read_body(receive)
         if body == b'':
             return
 
+        headers = dict(scope['headers'])
+
+        logger.info('headers: ' + str(headers))
+        logger.info('->> headers[authorization]: ' + str(headers[b'authorization']))
+
+        logger.info('->> scope: ' + str(scope))
         logger.info('->> body: ' + str(body))
         
+
         result = {}
 
         try:

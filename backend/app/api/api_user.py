@@ -1,33 +1,12 @@
 #print('__FILE__: ', __file__)
 
 import typing
-
-from typing import (
-    Any,
-    Callable,
-    Coroutine,
-    Dict,
-    List,
-    Optional,
-    Sequence,
-    Set,
-    Type,
-    Union,
-)
-
-from connect.types import (
-    ASGIApp,
-    Receive,
-    Scope,
-    Send,
-    DecoratedCallable
-)
-
 import logging
-import traceback
 
 import aiohttp
 import requests
+
+import aioredis
 
 ###
 import connect
@@ -42,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 @connect.api
 #async def add_user(json_data: Any) -> typing.Callable:
-async def add_user(args: Any) -> typing.Callable:   
+async def add_user_1(args: typing.Any) -> typing.Callable:   
     async with aiohttp.ClientSession(
         auth=aiohttp.BasicAuth('user', 'pass')
     ) as session:
@@ -57,7 +36,7 @@ async def add_user(args: Any) -> typing.Callable:
 #curl -d '{"api":"del_user2", "args":{"type":"a", "text":"b", "trash":"true"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
 @connect.api
-async def del_user2(args: Any):
+async def add_user_2(args: typing.Any):
     print('API: del_user: ', args['text'])  
 
     r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
@@ -71,10 +50,18 @@ async def del_user2(args: Any):
 
 #curl -d '{"api":"del_user", "args":{"type":"a", "text":"b", "trash":"true"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 @connect.api
-async def del_user(args: Any):
+async def add_user(args: typing.Any):
     print('====================< del_user: ', args['text'])  
 
-    await models.user.add_user()
+    #await models.user.add_user()
+    pool = await aioredis.create_pool(
+        'redis://localhost',
+        minsize=5, maxsize=10)
+
+
+    await pool.execute('set', 'my-key', 'value')
+    val = await pool.execute('get', 'my-key')
+    print('raw value:', val)
 
     return args
 
