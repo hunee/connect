@@ -1,2 +1,3 @@
 backend/logs/info.log
 nodejs/app/package-lock.json
+backend/deps/
