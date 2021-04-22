@@ -1,5 +1,5 @@
 #
-# Asyncio WEB server
+# Asyncio POST / HTTP/1.1/ WEB server
 #
 
 - backend
