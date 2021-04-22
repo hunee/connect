@@ -66,9 +66,13 @@ class ACOUNT(Base):
     __tablename__ = "acount"
     __table_args__ = (
         #{'mysql_collate': 'utf8_general_ci'},
-        {'mysql_engine':'InnoDB',
-        'mysql_partitions':'16',
-        'mysql_partition_by':'LINEAR HASH(id)'}
+        {
+            'mysql_engine':'InnoDB',
+            'mysql_collate':'utf8mb4_unicode_ci',
+            'mysql_charset':'utf8mb4',
+            'mysql_partitions':'16',
+            'mysql_partition_by':'LINEAR HASH(id)'
+        }
     )
 
     id = Column(Integer, primary_key=True)
@@ -80,6 +84,7 @@ class ACOUNT(Base):
     foo = Column(String(20))
     user_index = Column(String(20), index=True)
     user_index2 = Column(String(20), index=True)
+    운영체제_버전 = Column(String(255), nullable=True)
 
 class ACCOUNT(Base):
     __tablename__ = "account"
@@ -94,21 +99,69 @@ async def connect():
 
     #pass
 
-    #async with engine.begin() as conn:
-    #    await conn.run_sync(Base.metadata.drop_all)
-    #    await conn.run_sync(Base.metadata.create_all)
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.drop_all)
+        await conn.run_sync(Base.metadata.create_all)
 
 async def add_user():
     async with async_session() as session:
         async with session.begin():
+            session.add(
+                ACCOUNT(user="bbb", password="b")            
+            )
+
             session.add_all(
             [
-                #A(bs=[B(), B()], data="a1"),
-                #A(bs=[B()], data="a2"),
-                #A(bs=[B(), B()], data="a3"),
-                ACCOUNT(user="a", password="b")
+                ACOUNT(user="a1", password="b"),
+                ACOUNT(user="a2", password="b"),
+                ACOUNT(user="a3", password="b"),
+                ACOUNT(user="a4", password="b"),
+                ACOUNT(user="a5", password="b") ,                                                               
             ]
             )
+
+            # for relationship loading, eager loading should be applied.
+            stmt = select(ACOUNT).order_by(ACOUNT.id)
+
+            # for streaming ORM results, AsyncSession.stream() may be used.
+            result = await session.execute(stmt)
+            
+            '''
+            # result is a streaming AsyncResult object.
+            for a1 in result.scalars():
+                #print(a1)
+                print(f"user: {a1.user}")
+                print(f"created at: {a1.create_date}")
+            '''
+
+            name = 'a2'
+            stmt = select(ACOUNT).where(ACOUNT.user == name)
+            result = await session.stream(stmt)
+
+            a2 = await result.scalars().first()
+            if a2 is not None:
+                #print(a2)
+                print(f"user: {a2.user}")
+                print(f"password: {a2.password}")
+                print(f"created at: {a2.create_date}")
+
+                a2.password = '5'
+                #await session.commit()
+
+
+            # for relationship loading, eager loading should be applied.
+            stmt = select(ACOUNT).order_by(ACOUNT.id)
+
+            # for streaming ORM results, AsyncSession.stream() may be used.
+            result = await session.stream(stmt)
+            if result is not None:
+
+                # result is a streaming AsyncResult object.
+                async for a1 in result.scalars():
+                    #print(a1)
+                    print(f"user: {a1.user}")
+                    print(f"password: {a1.password}")
+                    print(f"created at: {a1.create_date}")
 
 '''
 async def add_user():

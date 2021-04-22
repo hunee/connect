@@ -11,13 +11,13 @@ import aioredis
 ###
 import connect
 
-
-#from ..models import user
-from .. import models
+from app.config import config, get_redis_url
+from app.models import user
 
 logger = logging.getLogger(__name__)
 
-pool = aioredis.ConnectionPool.from_url('redis://localhost', max_connections=4)
+REDIS_URL = get_redis_url(config('mysql'))
+pool = aioredis.ConnectionPool.from_url(REDIS_URL, max_connections=4)
 
 #curl -d '{"api":"add_user", "args":{"type":"a", "text":"b"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
@@ -55,6 +55,10 @@ async def add_user_2(args: typing.Any):
 async def add_user(args: typing.Any):
     print('====================< del_user: ', args['text'])  
 
+    # 1. db에 저장
+    await user.add_user()
+
+    # 2. redis 에 저장
     async with aioredis.Redis(connection_pool=pool) as conn:
         await conn.set("life", 420)
         life = await conn.get('life')

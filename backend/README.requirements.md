@@ -39,3 +39,8 @@ $ pip3 install pypika
 
 $ pip3 install pyjwt
 
+PyMySQL
+hiredis
+
+async-timeout
+typing-extensions

@@ -45,3 +45,11 @@ def get_database_url(db):
     return 'mysql+aiomysql://{0}:{1}@{2}:{3}/{4}'.format(db['user'], db['password'], host, db['port'], db['database'])
 
 
+def get_redis_url(db):
+    host = 'redis'
+    if 'False' in os.environ.get('DOCKER', "False"):
+        host = db['host']
+
+    return 'redis://{0}'.format(host)
+
+

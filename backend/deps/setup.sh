@@ -36,46 +36,48 @@ upgrade() {
 
 #pip3 install cffi
 
-#pip3 uninstall cython
-upgrade https://github.com/cython/cython
+#pip3 install cython
+##upgrade https://github.com/cython/cython
 
 
 #result=$?
 #echo "upgrade [ ${result} ]"
 
-##pip3 uninstall ujson
-upgrade https://github.com/ultrajson/ultrajson
+#pip3 install ujson
+##upgrade https://github.com/ultrajson/ultrajson
 
-##pip3 uninstall PyYAML
-upgrade https://github.com/yaml/pyyaml
+#pip3 install PyYAML
+##upgrade https://github.com/yaml/pyyaml
 
-##pip3 uninstall uvloop
-upgrade https://github.com/MagicStack/uvloop
+#pip3 install uvloop
+##upgrade https://github.com/MagicStack/uvloop
 
-upgrade https://github.com/aaugustin/websockets
+#upgrade https://github.com/aaugustin/websockets
 
-##pip3 uninstall uvicorn
-upgrade https://github.com/encode/uvicorn
+#pip3 install uvicorn
+##upgrade https://github.com/encode/uvicorn
 
 #pip3 uninstall requests
-upgrade https://github.com/psf/requests
+##upgrade https://github.com/psf/requests
 
-upgrade https://github.com/encode/starlette
-upgrade https://github.com/tiangolo/fastapi
+#pip3 uninstall starlette
+#pip3 uninstall fastapi
 
+#upgrade https://github.com/encode/starlette
+#upgrade https://github.com/tiangolo/fastapi
 
-upgrade https://github.com/aio-libs/aiomysql
-upgrade https://github.com/aio-libs/aioredis-py
+#upgrade https://github.com/aio-libs/aiomysql
+#upgrade https://github.com/aio-libs/aioredis-py
 
-upgrade https://github.com/MagicStack/asyncpg
+#pip3 uninstall aiomysql
+#upgrade https://github.com/MagicStack/asyncpg
 
 #pip3 uninstall sqlalchemy
-upgrade https://github.com/sqlalchemy/sqlalchemy
+#upgrade https://github.com/sqlalchemy/sqlalchemy
+
+#upgrade https://github.com/nackjicholson/aiosql
 
 
-upgrade https://github.com/nackjicholson/aiosql
-
-
-pip3 install aiohttp
+#pip3 install aiohttp
 ##upgrade https://github.com/aio-libs/aiohttp
 

@@ -139,18 +139,23 @@ async def connect():
         result = await conn.execute(
             sa.insert(t1), [{"name": "13"}, {"name": "some name 2"}, {"name": "3"}, {"name": "33 some name 2"}, {"name": "15"}, {"name": "55some name 2"}]
         )
-        print('result.rowcount: ' , result.rowcount)
+        #print('result.rowcount: ' , result.rowcount)
+        if result is not None:
+            print(result)
 
         result = await conn.execute(
             question_sa.insert(), [{"question_text": "some name 1"}, {"question_text": "some name 2"}]
         )
-        print('result.rowcount: ' , result.rowcount)
-        
+        #print('result.rowcount: ' , result.rowcount)
+        if result is not None:
+            print(result)
 
         result = await conn.execute(
             계정_정보.insert(), [{'uuid': 'uuid', '사용자': '1', '비밀번호':'비밀번호'}, {'uuid': 'uuid2', '사용자': '2', '비밀번호':'비밀번호'}]
         )
-        print('result.rowcount: ' , result.rowcount)
+        #print('result.rowcount: ' , result.rowcount)
+        if result is not None:
+            print(result)
 
     async with engine.connect() as conn:
 
@@ -158,32 +163,38 @@ async def connect():
         # the default result object is the
         # sqlalchemy.engine.Result object
         #result = await conn.execute(sa.text("SHOW DATABASES;"))
-        name = '2'
+        name = '3'
         stmt = (
             계정_정보.select().where(계정_정보.c.사용자 == name)
         )
         #stmt = sa.text('SELECT * FROM 계정_정보 WHERE 사용자 = "2";')
-        print('SQL: ' + str(stmt))
+        #print('SQL: ' + str(stmt))
 
         result = await conn.execute(stmt)
+        if result is not None:
+            print(result)
 
-        # the results are buffered so no await call is necessary
-        # for this case.
-        row = result.first()
-        print('result.rowcount: ' + str(result.rowcount))
-        print('사용자: ' + row.사용자)
-        print('비밀번호: ' + row.비밀번호)
-        print("list of rows: %s" % row)
+            row = result.first()
+            if row is not None:
+                # the results are buffered so no await call is necessary
+                # for this case.
+                
+                print('사용자: ' + row.사용자)
+                print('비밀번호: ' + row.비밀번호)
+                print("list of rows: %s" % row)
 
+        name='2'
         #a1.비밀번호 = "new data"
         stmt = (
-                t1.update().
-                where(t1.c.id == '2').
-                values(name='user #5')
+                계정_정보.update().
+                where(계정_정보.c.사용자 == name).
+                values(비밀번호='user #5')
             )
 
         result = await conn.execute(stmt)
-        print('result.rowcount: ' , result.rowcount)
+        if result is not None:
+            print(result)
+            print('update-------------- result.rowcount: ' , result.rowcount)
         
         
 
@@ -193,17 +204,12 @@ async def connect():
         # result at time, the AsyncConnection.stream() method is used.
         # this returns a sqlalchemy.ext.asyncio.AsyncResult object.
         async_result = await conn.stream(t1.select())
+        if async_result is not None:
+            print(async_result)
 
-        #async for partition in async_result.partitions(1):
-        #    print("list of rows: %s" % partition)
-
-        # this object supports async iteration and awaitable
-        # versions of methods like .all(), fetchmany(), etc.
-        #async for row in async_result:
-            #print("name:", row['name'], "; id: ", row['id'])
-
-        row = await async_result.first()
-        print("list of rows: %s" % row)
+            row = await async_result.first()
+            if row is not None:
+                print("list of rows: %s" % row)
 
         #async for id, name in async_result:
         #    print("id:", id, "; name: ", name)            

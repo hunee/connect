@@ -3,7 +3,7 @@ import asyncio
 import aiohttp
 import requests
 
-url = "http://localhost:8000"
+url = "http://localhost:80"
 header = {"Accept-Encoding": "gzip,deflate", "Content-Type":"application/json"}
 data = '{"api":"add_user", "args":{"type":"a", "text":"b"}}'
 
