@@ -6,6 +6,30 @@ import typing
 
 import ujson
 
+from uvicorn.main import ServerState
+from uvicorn.protocols.http.auto import AutoHTTPProtocol
+from uvicorn.protocols.websockets.auto import AutoWebSocketsProtocol
+
+from uvicorn.config import Config
+
+
+try:
+    import uvloop
+except ImportError:  # pragma: no cover
+    uvloop = None
+
+try:
+    import httptools
+except ImportError:  # pragma: no cover
+    httptools = None
+
+try:
+    import websockets
+except ImportError:  # pragma: no cover
+    # Note that we skip the websocket tests completely in this case.
+    websockets = None
+
+
 from starlette.types import ASGIApp, Receive, Scope, Send
 
 from .message import run_body
@@ -42,6 +66,29 @@ async def app_get_put(scope, receive, send):
 
 class post():
     def __init__(self, debug: bool = False) -> None:
+        config = Config(app=self)
+
+                
+        policy = asyncio.get_event_loop_policy()
+        assert isinstance(policy, asyncio.events.BaseDefaultEventLoopPolicy)
+        expected_loop = "asyncio" if uvloop is None else "uvloop"
+        assert type(policy).__module__.startswith(expected_loop)
+
+        server_state = ServerState()
+        protocol = AutoHTTPProtocol(config=config, server_state=server_state)
+        expected_http = "H11Protocol" if httptools is None else "HttpToolsProtocol"
+        assert type(protocol).__name__ == expected_http
+        
+        expected_http = "h11" if httptools is None else "httptools"
+
+        protocol = AutoWebSocketsProtocol(config=config, server_state=server_state)
+        expected_websockets = "WSProtocol" if websockets is None else "WebSocketProtocol"
+        assert type(protocol).__name__ == expected_websockets
+        
+        expected_websockets = "wspro" if websockets is None else "websockets"
+        
+        logger.info(f'$$$ ------ START SERVER {config.host}:{config.port} --- {expected_loop}:{expected_http}:{expected_websockets} ------')
+
         pass
 
     async def _read_body(self, receive: Receive) -> bytes:

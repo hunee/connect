@@ -11,6 +11,10 @@ $ git clone https://github.com/sqlalchemy/sqlalchemy/
 
 $ git clone https://github.com/nackjicholson/aiosql
 
+https://github.com/python-hyper/wsproto/
+httptools
+
+https://github.com/vibora-io/vibora
 
 $ pip3 install .
 
@@ -21,14 +25,21 @@ $ pip3 install -r requirements.txt
 
 $ pip3 install PyYAML
 $ pip3 install ujson
-$ pip3 install uvicorn
+
+$ pip3 install wsproto
+$ pip3 install websockets 
+
+$ pip3 install httptools
+$ pip3 install h11
+
 $ pip3 install uvloop
+
+$ pip3 install uvicorn
+
 
 $ pip3 install aiohttp
 $ pip3 install requests
 
-$ pip3 install aiomysql
-$ pip3 install aioredis
 $ pip3 install SQLAlchemy
 
 $ pip3 install alembic
@@ -39,8 +50,8 @@ $ pip3 install pypika
 
 $ pip3 install pyjwt
 
-PyMySQL
-hiredis
+$ pip3 install PyMySQL
+$ pip3 install hiredis
 
 async-timeout
 typing-extensions
