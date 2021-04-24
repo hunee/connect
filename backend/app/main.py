@@ -56,8 +56,8 @@ class server(message.post):
         
         super().__init__(debug)
 
-        asyncio.ensure_future(user.connect())
-        asyncio.ensure_future(models.battle_connect())
+        #asyncio.ensure_future(user.connect())
+        #asyncio.ensure_future(models.battle_connect())
 
 def main():
     app = server(debug=True)

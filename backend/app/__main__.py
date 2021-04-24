@@ -23,4 +23,4 @@ if __name__ == '__main__':
         args.host, port = args.host.split(':', 1)
         args.port = int(port)
 
-    uvicorn.run("app.main:app", host=args.host, port=args.port, log_config="./logging.yaml", reload=True)
+    uvicorn.run("app.main:app", host=args.host, port=args.port, reload=True)

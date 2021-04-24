@@ -34,10 +34,10 @@
 - Docker
 
 
-$ uvicorn app.main:app --reload --log-config ./config/logging.yaml
-or
-$ python3 -m app --host 0.0.0.0 --port 8000
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-config ./logging.yaml
 
-$ server.sh --host 0.0.0.0 --port 8000
+python3 ./serve.py --host 0.0.0.0 --port 8000
+
+server.sh --host 0.0.0.0 --port 8000
 
 

@@ -2,7 +2,6 @@ import os
 from flask import Flask
 import mysql.connector
 
-
 class DBManager:
     def __init__(self, database='staging', host="db", user="root", password_file=None):
         pf = open(password_file, 'r')

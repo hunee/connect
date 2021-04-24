@@ -9,9 +9,7 @@ import os
 import pathlib
 import sys
 
-
 from message import Config
-
 
 ###
 logger = logging.getLogger(__name__)

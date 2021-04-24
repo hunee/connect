@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-python3 -m app $1 $2 $3 $4
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-config ./logging.yaml
 

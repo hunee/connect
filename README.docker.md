@@ -6,6 +6,9 @@ docker-compose up -d
 docker-compose up -d --build
 docker-compose up -d --force-recreate
 
+docker-compose up -d --build --no-recreate 
+docker-compose up -d --build --force-recreate --renew-anon-volumes 
+
 docker-compose down 
 docker-compose down --volume
 
@@ -22,3 +25,4 @@ $ mysql -u root -p
 
 docker exec -it server_redis_1 redis-cli
 
+docker exec -it connect_backend_1 bash

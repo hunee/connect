@@ -66,9 +66,9 @@ async def app_get_put(scope, receive, send):
 
 class post():
     def __init__(self, debug: bool = False) -> None:
+        '''
         config = Config(app=self)
 
-                
         policy = asyncio.get_event_loop_policy()
         assert isinstance(policy, asyncio.events.BaseDefaultEventLoopPolicy)
         expected_loop = "asyncio" if uvloop is None else "uvloop"
@@ -88,7 +88,8 @@ class post():
         expected_websockets = "wspro" if websockets is None else "websockets"
         
         logger.info(f'$$$ ------ START SERVER {config.host}:{config.port} --- {expected_loop}:{expected_http}:{expected_websockets} ------')
-
+        '''
+        
         pass
 
     async def _read_body(self, receive: Receive) -> bytes:

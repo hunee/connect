@@ -10,3 +10,6 @@ from .config import Config
 
 from .message import method
 
+#from .logger import Logger
+
+#Logger()

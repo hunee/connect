@@ -8,3 +8,7 @@ uvicorn==0.13.4
 uvloop==0.15.2
 PyMySQL==0.9.3
 hiredis==2.0.0
+h11==0.12.0
+httptools==0.1.1
+websockets==8.1
+wsproto==1.0.0

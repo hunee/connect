@@ -20,5 +20,16 @@
 				"password": "db-78n9n"
 			}
 		]
-	}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"ms-vscode.cmake-tools",
+			"twxs.cmake",
+			"ms-python.python"
+		]
+	}	
 }
