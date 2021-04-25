@@ -50,6 +50,16 @@ loggers:
         propagate: False
         handlers: [access, logfile]
 
+    websockets.legacy.server:
+        level: INFO
+        propagate: False        
+        handlers: [default, logfile]
+
+    websockets.legacy.protocol:
+        level: INFO
+        propagate: False        
+        handlers: [default, logfile]
+
 root:
     level: DEBUG
     handlers: [default, logfile]

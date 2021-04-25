@@ -4,13 +4,17 @@
 import logging
 import typing
 
+import time
+import inspect
+
 import ujson
 
 ####
 logger = logging.getLogger(__name__)
 
-_msg_methods = dict()
+_method_dict = dict()
 
+'''
 def method(func: typing.Callable) -> typing.Callable:
     #module = func.__module__.split(".")[-1]
     #key = module + "." + func.__name__
@@ -19,6 +23,32 @@ def method(func: typing.Callable) -> typing.Callable:
 
     _msg_methods[key] = func
     return func
+'''
+
+def method(func: typing.Callable) -> typing.Callable:
+    #module = func.__module__.split(".")[-1]
+    #key = module + "." + func.__name__
+
+    async def decorator(*args, **kwargs) -> typing.Callable:
+        start_time = time.perf_counter()
+
+        result = await func(*args, **kwargs)
+
+        end_time = time.perf_counter()
+        elapsed_time = end_time - start_time
+
+        logger.info('async def ' + func.__module__ + '.' + func.__name__ + ': ELAPSED TIME: ' + str(elapsed_time))
+
+        return result
+
+
+    key = func.__name__
+    #logger.info("--->> METHOD: '" + func.__module__ + '.' + key + "' from " + func.__module__)
+    logger.info('->> register method - ' + func.__module__ + '.' + key)
+
+    _method_dict[key] = decorator
+
+    return decorator
 
 '''
 def id_(id: str) -> Callable[[DecoratedCallable], DecoratedCallable]:
@@ -32,14 +62,14 @@ def id_(id: str) -> Callable[[DecoratedCallable], DecoratedCallable]:
     return decorator
 '''
 
-async def run_body(body: typing.Any) -> typing.Any:
+async def run_method(body: typing.Any) -> typing.Any:
     result = {}
 
     try:
         method = body["method"]
         args = body["args"]
 
-        result = await _msg_methods[method](args)
+        result = await _method_dict[method](args)
     
     except Exception as e:
         text = str(type(e).__name__ + " " + str(e))

@@ -4,11 +4,10 @@
 var server = require('./server');
 
 var	connect = require('connect'),
-  http = require('http'),
-  https = require('https');
+  http = require('http');
 
 var morgan = require('morgan');
-var path = require('path')
+var path = require('path');
 
 var bodyParser = require('body-parser');
 var compression = require('compression');
@@ -165,7 +164,7 @@ app.on('send', function (response, packet, data) {
     break;
 }*/
 
-app.port = 8080;
+app.port = 8000;
 
 /*
 if (config.app.https) {

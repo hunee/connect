@@ -16,6 +16,8 @@ import sqlalchemy as sa
 
 from sqlalchemy.ext.asyncio import create_async_engine
 
+import connect
+
 #from ..config import config
 from app.config import config, get_database_url
 
@@ -100,10 +102,10 @@ t1 = sa.Table(
     '계정_생성_정보', meta,
     sa.Column('id', sa.Integer, autoincrement=True, primary_key=True, comment='사용자_계정정보'),
     sa.Column('날짜', sa.DateTime, server_default=sa.func.now()),
-    sa.Column('마켓', sa.String(255), nullable=False),
-    sa.Column('단말기', sa.String(255), nullable=False),
-    sa.Column('운영체제', sa.String(255), nullable=False),
-    sa.Column('운영체제_버전', sa.String(255), nullable=False),
+    sa.Column('마켓', sa.String(255), nullable=False, default=""),
+    sa.Column('단말기', sa.String(255), nullable=False, default=""),
+    sa.Column('운영체제', sa.String(255), nullable=False, default=""),
+    sa.Column('운영체제_버전', sa.String(255), nullable=False, default=""),
     sa.Column('fk_계정_정보_id', sa.Integer),
 
     # Indexes #
@@ -117,10 +119,8 @@ t1 = sa.Table(
     #mysql_partition_by="LINEAR HASH(id)",
 )    
 
-
+@connect.profile
 async def connect():
-    print('------------ connect')
-
     # conn is an instance of AsyncConnection
     async with engine.begin() as conn:
 
@@ -151,7 +151,10 @@ async def connect():
             print(result)
 
         result = await conn.execute(
-            계정_정보.insert(), [{'uuid': 'uuid', '사용자': '1', '비밀번호':'비밀번호'}, {'uuid': 'uuid2', '사용자': '2', '비밀번호':'비밀번호'}]
+            계정_정보.insert(), [
+                {'uuid': 'uuid', '사용자': '1', '비밀번호':'비밀번호', '단말기':'비밀번호'}, 
+                {'uuid': 'uuid2', '사용자': '2', '비밀번호':'비밀번호', '단말기':'비밀번호'}
+            ]
         )
         #print('result.rowcount: ' , result.rowcount)
         if result is not None:

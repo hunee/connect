@@ -21,6 +21,8 @@ git clone https://github.com/MagicStack/asyncpg
 
 git clone https://github.com/python-hyper/h2
 
+https://github.com/ijl/orjson
+
 pip3 install .
 
 pip freeze | xargs pip uninstall -y
@@ -30,6 +32,7 @@ pip3 install -r requirements.txt
 
 pip3 install PyYAML
 pip3 install ujson
+pip3 install orjson
 
 pip3 install wsproto
 pip3 install websockets 

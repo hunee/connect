@@ -7,7 +7,7 @@ import sys
 
 
 ###
-import message
+import connect
 
 
 from app import api
@@ -51,16 +51,28 @@ return [res.json for res in results]
 ###
 logger = logging.getLogger(__name__)
 
-class server(message.post):
+class Server(connect.Server):
     def __init__(self, debug: bool = False) -> None:
         
         super().__init__(debug)
 
-        #asyncio.ensure_future(user.connect())
-        #asyncio.ensure_future(models.battle_connect())
+        asyncio.ensure_future(user.connect_begin())
+        asyncio.ensure_future(models.battle_connect())
 
 def main():
-    app = server(debug=True)
+    app = Server(debug=True)
     return app
 
 app = main()
+
+
+'''
+asyncio.ensure_future(user.connect())
+asyncio.ensure_future(models.battle_connect())
+
+async def app(scope, receive, send):
+    await message.asgi(scope, receive, send)
+'''
+
+
+

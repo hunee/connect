@@ -2,6 +2,7 @@
 
 import asyncio
 import logging
+import typing
 
 import sqlalchemy as sa
 
@@ -22,6 +23,8 @@ from sqlalchemy.orm import sessionmaker
 
 
 #from ..config import config
+import connect
+
 from app.config import config, get_database_url
 
 
@@ -43,6 +46,7 @@ async_session = sessionmaker(
 
 Base = declarative_base()
 
+'''
 class A(Base):
     __tablename__ = "a"
 
@@ -85,72 +89,84 @@ class ACOUNT(Base):
     user_index = Column(String(20), index=True)
     user_index2 = Column(String(20), index=True)
     운영체제_버전 = Column(String(255), nullable=True)
-
+'''
 class ACCOUNT(Base):
-    __tablename__ = "account"
+    __tablename__ = "계정_생성_정보"
 
     id = Column(Integer, primary_key=True)
-    user = Column(String(20))
-    password = Column(String(20))
-    create_date = Column(DateTime, server_default=func.now())
+    날짜 = Column(DateTime, server_default=func.now())
+    마켓 = Column(String(20))
+    단말기 = Column(String(20))
 
-async def connect():
-    print('------------ connect')
+    운영체제 = Column(String(255), nullable=False, default="")
+    운영체제_버전 = Column(String(255), nullable=False, default="")
 
-    #pass
+    fk_계정_정보_id = Column(Integer)#, ForeignKey("계정_정보.id"))
 
+    #bs = relationship("계정_정보")
+
+@connect.profile
+async def connect_begin():
     async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.drop_all)
-        await conn.run_sync(Base.metadata.create_all)
+        #await conn.run_sync(Base.metadata.drop_all)
+        #await conn.run_sync(Base.metadata.create_all)
+        pass
 
+
+@connect.profile
 async def add_user():
+
     async with async_session() as session:
         async with session.begin():
             session.add(
-                ACCOUNT(user="bbb", password="b")            
+                ACCOUNT(단말기="bbb", 마켓="b")            
             )
 
             session.add_all(
             [
-                ACOUNT(user="a1", password="b"),
-                ACOUNT(user="a2", password="b"),
-                ACOUNT(user="a3", password="b"),
-                ACOUNT(user="a4", password="b"),
-                ACOUNT(user="a5", password="b") ,                                                               
+                ACCOUNT(단말기="a1", 마켓="b"),
+                ACCOUNT(단말기="a2", 마켓="b"),
+                ACCOUNT(단말기="a3", 마켓="b"),
+                ACCOUNT(단말기="a4", 마켓="b"),
+                ACCOUNT(단말기="a5", 마켓="b") ,                                                               
             ]
             )
 
             # for relationship loading, eager loading should be applied.
-            stmt = select(ACOUNT).order_by(ACOUNT.id)
+            stmt = select(ACCOUNT).order_by(ACCOUNT.fk_계정_정보_id)
 
             # for streaming ORM results, AsyncSession.stream() may be used.
             result = await session.execute(stmt)
             
-            '''
+            
             # result is a streaming AsyncResult object.
             for a1 in result.scalars():
                 #print(a1)
-                print(f"user: {a1.user}")
-                print(f"created at: {a1.create_date}")
-            '''
+                pass
+                print(f"id: {a1.id}")
+                print(f"fk_계정_정보_id: {a1.fk_계정_정보_id}")
+                print(f"단말기: {a1.단말기}")
+                print(f"마켓: {a1.마켓}")
+            
 
             name = 'a2'
-            stmt = select(ACOUNT).where(ACOUNT.user == name)
+            stmt = select(ACCOUNT).where(ACCOUNT.단말기 == name)
             result = await session.stream(stmt)
 
             a2 = await result.scalars().first()
             if a2 is not None:
                 #print(a2)
-                print(f"user: {a2.user}")
-                print(f"password: {a2.password}")
-                print(f"created at: {a2.create_date}")
+                pass
+                print(f"단말기: {a2.단말기}")
+                #print(f"password: {a2.password}")
+                #print(f"created at: {a2.create_date}")
 
-                a2.password = '5'
+                a2.마켓 = '5'
                 #await session.commit()
 
 
             # for relationship loading, eager loading should be applied.
-            stmt = select(ACOUNT).order_by(ACOUNT.id)
+            stmt = select(ACCOUNT).order_by(ACCOUNT.id)
 
             # for streaming ORM results, AsyncSession.stream() may be used.
             result = await session.stream(stmt)
@@ -159,9 +175,9 @@ async def add_user():
                 # result is a streaming AsyncResult object.
                 async for a1 in result.scalars():
                     #print(a1)
-                    print(f"user: {a1.user}")
-                    print(f"password: {a1.password}")
-                    print(f"created at: {a1.create_date}")
+                    print(f"user: {a1.단말기}")
+                    #print(f"password: {a1.password}")
+                    #print(f"created at: {a1.create_date}")
 
 '''
 async def add_user():
