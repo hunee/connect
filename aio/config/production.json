@@ -1,0 +1,96 @@
+{
+	"development": {
+		"app": {
+			"host": "localhost",
+			"port": "3000",
+            "https": false
+		},
+		"IAB": {
+			"host": "localhost",
+			"port": "8001"
+		},
+		"PNS": {
+			"host": "localhost",
+			"port": "8001"
+		},
+		"RANK": {
+			"host": "192.168.1.103",
+			"port": "8001"
+		},
+		"SQL_CACHED": {
+			"host": "192.168.1.103",
+			"port": "11211"
+		},
+		"SQL_DB": {
+			"host": "59.10.114.189",
+			"port": "3306",
+			"user": "admin",
+			"password": "",
+			"database": "P9"
+		},
+		"SQL_WEB": {
+			"host": "192.168.1.103",
+			"port": "3306",
+			"user": "admin",
+			"password": "",
+			"database": "SQL_WEB"
+		},
+		"DB_GAME": {
+			"host": "59.10.114.186",
+			"port": "27017",
+			"collection": "DB"
+		},
+		"DB_LOG": {
+			"host": "59.10.114.187",
+			"port": "27017",
+			"collection": "LOG"
+		}
+	},
+	"production": {
+		"app": {
+			"host": "localhost",
+			"port": "8000",
+            "https": true
+		},
+		"IAB": {
+			"host": "172.20.6.181",
+			"port": "8000"
+		},
+		"PNS": {
+			"host": "172.20.6.180",
+			"port": "8000"
+		},
+		"RANK": {
+			"host": "172.20.6.108",
+			"port": "8001"
+		},
+		"SQL_CACHED": {
+			"host": "172.20.6.107",
+			"port": "11211"
+		},
+		"SQL_DB": {
+			"host": "172.20.6.106",
+			"port": "3306",
+			"user": "admin",
+			"password": "",
+			"database": "P9"
+		},
+		"SQL_WEB": {
+			"host": "172.20.6.179",
+			"port": "3306",
+			"user": "admin",
+			"password": "",
+			"database": "SERVER"
+		},
+		"DB_GAME": {
+			"host": "172.20.6.100",
+			"port": "27017",
+			"collection": "DB"
+		},
+		"DB_LOG": {
+			"host": "172.20.6.103",
+			"port": "27017",
+			"collection": "LOG"
+		}
+	}
+}

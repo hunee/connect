@@ -1,0 +1,40 @@
+DATABASE:
+  USER:
+      - database: sys
+        user: root
+        password: password
+        host: localhost
+        port: 3306
+        minsize: 1
+        maxsize: 5
+        range: [1,1000]
+
+      - database: sys
+        user: root
+        password: password
+        host: localhost
+        port: 3306
+        minsize: 1
+        maxsize: 5
+        range: [1001, 2000]
+
+  BATTLE:
+    database: sys
+    user: root
+    password: password
+    host: localhost
+    port: 3306
+    minsize: 1
+    maxsize: 5
+
+  MASTER:
+    database: sys
+    user: root
+    password: password
+    host: localhost
+    port: 3306
+    minsize: 1
+    maxsize: 5
+
+HOST: 127.0.0.1
+PORT: 8080
