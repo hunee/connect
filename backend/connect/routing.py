@@ -70,7 +70,7 @@ async def run_method(body: typing.Any) -> typing.Any:
     try:
         method = body['method']
         args = body['args'] if 'args' in body else {}
-        kwargs = body['kwargs'] if 'kwargs' in body else {}        
+        kwargs = body['kwargs'] if 'kwargs' in body else {}
         result = await _method_dict[method](*args, **kwargs)
 
         #args = body['args'] if 'args' in body else {}

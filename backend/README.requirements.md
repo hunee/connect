@@ -34,13 +34,14 @@ pip3 install PyYAML
 pip3 install ujson
 pip3 install orjson
 
-pip3 install wsproto
-pip3 install websockets 
-
-pip3 install httptools
-pip3 install h11
 
 pip3 install uvloop
+
+pip3 install httptools
+pip3 install websockets 
+
+pip3 install h11
+pip3 install wsproto
 
 pip3 install uvicorn
 

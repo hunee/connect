@@ -1,29 +1,41 @@
 #
-# Asyncio "POST / HTTP/1.1" WEB server
+# Python WEB server
 #
 
 - backend
   - python 3.9
+    
     - asyncio
-    - uvicorn (ASGI)
-    - sqlalchemy 1.4
+    - cython, c/c++
 
-    - "POST / HTTP/1.1"
-    - body parser
-      - json
-      - routing
+    - db
+      - SQLAlchemy 1.4
 
+    - asgi
+      - uvicorn
+        - uvloop, websockets, httptools
+        - starlette
+        - fastapi
+
+        - routing
+          - HTTP POST/1.1
+          - WebSocket
+      
   - nodejs
-    - "POST / HTTP/1.1"
-    - body parser
-      - json
+    - connect
       - routing
+        - HTTP POST/1.1
 
-- db
-  - mysql
-  - alembic
+      - db
+        - mysql2
 
-- redis
+  - boost asio
+
+  - db
+    - mysql
+    - alembic
+
+  - redis
 
 - proxy
   - nginex

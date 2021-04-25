@@ -15,5 +15,6 @@ from .profile import profile
 from .function import function, function_
 
 from .message import Message
+from .singleton import Singleton
 
 #Logger()

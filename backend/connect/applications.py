@@ -7,6 +7,7 @@ import typing
 import ujson
 import orjson
 
+'''
 try:
     import uvloop
 except ImportError:  # pragma: no cover
@@ -22,6 +23,7 @@ try:
 except ImportError:  # pragma: no cover
     # Note that we skip the websocket tests completely in this case.
     websockets = None
+'''
 
 from uvicorn.loops.auto import auto_loop_setup
 
@@ -101,7 +103,7 @@ def raw_request_response(func: typing.Callable) -> ASGIApp:
     async def app(scope: Scope, receive: Receive, send: Send) -> None:
         response = {}
 
-        if  scope["method"] == "POST":
+        if scope["method"] == "POST":
             try:
                 request_body = await read_body(receive)
                 if request_body == b'':
@@ -147,6 +149,7 @@ class Server():
     def __init__(self, debug: bool = False) -> None:
         #auto_loop_setup()
 
+        '''
         policy = asyncio.get_event_loop_policy()
         assert isinstance(policy, asyncio.events.BaseDefaultEventLoopPolicy)
         expected_loop = "asyncio" if uvloop is None else "uvloop"
@@ -158,6 +161,7 @@ class Server():
 
         expected_websockets = "wsproto" if websockets is None else "websockets"
         logger.info('->> WEBSOCKETS: ' + expected_websockets)
+        '''
 
         ###
         self.websocket = websocket_session(websocket_endpoint)
