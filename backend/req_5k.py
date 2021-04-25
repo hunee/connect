@@ -6,7 +6,7 @@ import requests
 url = "http://localhost:5000"
 header = {"Accept-Encoding": "gzip,deflate", "Content-Type":"application/json"}
 data = '{"method":"add_user", "args":{"type":"a", "text":"b"}}'
-
+#        {"method":"add_user", "args":{"type":"a", "text":"b", "user":"b"}}
 
 async def main():
     async with aiohttp.ClientSession(

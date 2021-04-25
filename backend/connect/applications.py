@@ -107,6 +107,8 @@ def raw_request_response(func: typing.Callable) -> ASGIApp:
                 if request_body == b'':
                     return
 
+                #print('->> body: ' + request_body)
+
                 json_body = orjson.loads(request_body)
 
                 if is_coroutine:

@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-project_path = os.path.join(os.path.dirname(__file__), 'vibora')
+project_path = os.path.join(os.path.dirname(__file__), 'connect')
 
 # Seeking for files pending compilation.
 pending_compilation = set()

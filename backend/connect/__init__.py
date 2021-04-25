@@ -14,4 +14,6 @@ from .method import method
 from .profile import profile
 from .function import function, function_
 
+from .message import Message
+
 #Logger()

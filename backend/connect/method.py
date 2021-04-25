@@ -32,6 +32,8 @@ def method(func: typing.Callable) -> typing.Callable:
     async def decorator(*args, **kwargs) -> typing.Callable:
         start_time = time.perf_counter()
 
+        logger.info('async def ' + func.__module__ + '.' + key)
+
         result = await func(*args, **kwargs)
 
         end_time = time.perf_counter()
@@ -66,15 +68,19 @@ async def run_method(body: typing.Any) -> typing.Any:
     result = {}
 
     try:
-        method = body["method"]
-        args = body["args"]
+        method = body['method']
+        args = body['args'] if 'args' in body else {}
+        kwargs = body['kwargs'] if 'kwargs' in body else {}        
+        result = await _method_dict[method](*args, **kwargs)
 
-        result = await _method_dict[method](args)
+        #args = body['args'] if 'args' in body else {}
+        #kwargs = body['kwargs'] if 'kwargs' in body else args
+        #result = await _method_dict[method](kwargs)
     
     except Exception as e:
         text = str(type(e).__name__ + " " + str(e))
-        result['method'] = 'run_body()'
-        result['args'] = text
+        result['method'] = 'run_method()'
+        result['kwargs'] = text
 
         logger.exception("Unhandled exception: " + text)
         #raise
