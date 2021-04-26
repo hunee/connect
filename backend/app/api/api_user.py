@@ -54,9 +54,8 @@ async def add_user_2(kwargs: typing.Any):
 @connect.post
 #async def add_user(kwargs: typing.Any):
 async def REQ_ADD_USER(type: typing.Any, text: typing.Any, uname: typing.Any):
-    logger.info("->> type: " + str(type))
-    #logger.info("->> text: " + uname)
-    
+    logger.info(f'-->> type: {str(type)}, text: {str(text)}, uname: {str(uname)}')
+
     #logger.info('->> KWARGS: ' + str(kwargs))
 
     # 1. db에 저장

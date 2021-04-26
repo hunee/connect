@@ -42,15 +42,15 @@ from starlette.requests import Request
 from starlette.responses import Response
 
 from .routing import run_http_post, run_websocket
-from .function import function, function_
+from .message import Message, response_exception
 
-from .message import Message, RES_Exception, RES_ERROR
+from .functools import function, function_async, profile
 
 
 ###
 logger = logging.getLogger(__name__)
 
-@function
+@function_async
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
 
@@ -62,29 +62,25 @@ async def websocket_endpoint(websocket: WebSocket):
     except WebSocketDisconnect:
         pass
 
-@function
+@function_async
 async def http_endpoint(request: Request):
     content = '%s %s' % (request.method, request.url.path)
 
     return Response(content, media_type='text/plain')
 
 
-@function
-async def http_post_endpoint(json_body):
+@function_async
+async def fast_http_post_endpoint(json_body):
     try:
         response = await run_http_post(json_body)
 
     except Exception as e:
-        logger.exception(e)
-
-        req = Message(RES_Exception)
-        req.T.message = str(type(e).__name__ + " " + str(e))
-
-        response = req.dict
+        response = response_exception(e)
 
     finally:
         return response
 
+@function_async
 async def read_body(receive: Receive) -> bytes:
     """
     Read and return the entire body from an incoming ASGI message.
@@ -100,8 +96,8 @@ async def read_body(receive: Receive) -> bytes:
     return body
 
 
-@function_
-def raw_request_response(func: typing.Callable) -> ASGIApp:
+@function
+def fast_request_response(func: typing.Callable) -> ASGIApp:
     """
     Takes a function or coroutine `func(request) -> response`,
     and returns an ASGI application.
@@ -128,12 +124,7 @@ def raw_request_response(func: typing.Callable) -> ASGIApp:
                     response = await run_in_threadpool(func, json_body)
 
             except Exception as e:
-                logger.exception(e)
-
-                req = Message(RES_Exception)
-                req.T.message = str(type(e).__name__ + " " + str(e))
-
-                response = req.dict
+                response = response_exception(e)
                 
             finally:
                 pass
@@ -178,7 +169,7 @@ class Server():
 
         ###
         self.websocket = websocket_session(websocket_endpoint)
-        self.http = raw_request_response(http_post_endpoint)
+        self.http = fast_request_response(fast_http_post_endpoint)
 
         pass
 

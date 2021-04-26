@@ -5,22 +5,30 @@
 - backend
   - python 3.9
     
-    - asyncio
+    - asyncio, uvloop
     - cython, c/c++
 
     - db
       - SQLAlchemy 1.4
+      - mysql
 
     - asgi
       - uvicorn
-        - uvloop, websockets, httptools
-        - starlette
-        - fastapi
+        - websockets
+        - httptools
 
-        - routing
-          - HTTP POST/1.1
-          - WebSocket
+    - starlette
+    - fastapi
+
+    - routing
+      - HTTP POST/1.1
+      - websocket
       
+      - base64, md5, jwt
+      - json
+        - orjson
+        - ujson
+
   - nodejs
     - connect
       - routing
@@ -29,7 +37,8 @@
       - db
         - mysql2
 
-  - boost asio
+  - boost
+    - asio
 
   - db
     - mysql

@@ -1,7 +1,13 @@
+import logging
+
 import orjson
 
 import base64
 import hashlib
+
+####
+logger = logging.getLogger(__name__)
+
 
 class Message:
     def __init__(self, T):
@@ -29,6 +35,14 @@ class RES_ERROR():
 class RES_Exception():
     def __init__(self):
         self.message = ''
+
+def response_exception(e):
+    logger.exception(e)
+
+    req = Message(RES_Exception)
+    req.T.message = str(type(e).__name__ + " " + str(e))
+    return req.dict
+
 
 class RES_ADD_USER():
     def __init__(self):

@@ -35,7 +35,7 @@ set(SRC_DIR src)
 set(SRCS
 
 #osver
-${SRC_DIR}/server.cpp
+${SRC_DIR}/asio-server.cpp
 
 
 )

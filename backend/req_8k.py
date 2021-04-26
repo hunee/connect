@@ -35,11 +35,11 @@ class REQ_ADD_USER():
     def __init__(self):
         self.type = 'body.idhkjfhdskfhkshkf'
         self.text = 'textfkdjsfhkjshkfjdshfskjh'
-        self.uname2 = 'unameghfgjsdgfjhsfgsdjhfgs'
+        self.uname = 'unameghfgjsdgfjhsfgsdjhfgs'
 
 
 req = Message(REQ_ADD_USER)
-req.T.uname2 = 'body.data'
+req.T.uname = 'body.data'
 
 async def main():
     async with aiohttp.ClientSession(
