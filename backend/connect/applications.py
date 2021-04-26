@@ -4,8 +4,13 @@ import asyncio
 import logging
 import typing
 
+import json
 import ujson
 import orjson
+
+import base64
+import hashlib
+
 
 '''
 try:
@@ -36,8 +41,11 @@ from starlette.routing import iscoroutinefunction_or_partial
 from starlette.requests import Request
 from starlette.responses import Response
 
-from .method import run_method
+from .routing import run_http_post, run_websocket
 from .function import function, function_
+
+from .message import Message, RES_Exception, RES_ERROR
+
 
 ###
 logger = logging.getLogger(__name__)
@@ -60,23 +68,22 @@ async def http_endpoint(request: Request):
 
     return Response(content, media_type='text/plain')
 
+
 @function
 async def http_post_endpoint(json_body):
-    ###
-    result = {}
-
     try:
-        response = await run_method(json_body)
+        response = await run_http_post(json_body)
 
     except Exception as e:
-        msg = str(type(e).__name__ + " " + str(e))  
-        response['method'] = 'postapi()'
-        response['args'] = 'args'
+        logger.exception(e)
 
-        logger.exception("Unhandled exception: " + msg)
-        #raise
+        req = Message(RES_Exception)
+        req.T.message = str(type(e).__name__ + " " + str(e))
 
-    return response
+        response = req.dict
+
+    finally:
+        return response
 
 async def read_body(receive: Receive) -> bytes:
     """
@@ -92,6 +99,7 @@ async def read_body(receive: Receive) -> bytes:
 
     return body
 
+
 @function_
 def raw_request_response(func: typing.Callable) -> ASGIApp:
     """
@@ -100,7 +108,9 @@ def raw_request_response(func: typing.Callable) -> ASGIApp:
     """
     is_coroutine = iscoroutinefunction_or_partial(func)
 
+    @function
     async def app(scope: Scope, receive: Receive, send: Send) -> None:
+
         response = {}
 
         if scope["method"] == "POST":
@@ -109,9 +119,8 @@ def raw_request_response(func: typing.Callable) -> ASGIApp:
                 if request_body == b'':
                     return
 
-                #print('->> body: ' + request_body)
-
-                json_body = orjson.loads(request_body)
+                request_body_b64decode = base64.b64decode(request_body).decode('utf-8')
+                json_body = orjson.loads(request_body_b64decode)
 
                 if is_coroutine:
                     response = await func(json_body)
@@ -119,31 +128,35 @@ def raw_request_response(func: typing.Callable) -> ASGIApp:
                     response = await run_in_threadpool(func, json_body)
 
             except Exception as e:
-                msg = str(type(e).__name__ + " " + str(e))  
-                result['method'] = 'postapi()'
-                result['args'] = 'args'
+                logger.exception(e)
 
-                logger.exception("Unhandled exception: " + msg)
-                #raise
-            
+                req = Message(RES_Exception)
+                req.T.message = str(type(e).__name__ + " " + str(e))
+
+                response = req.dict
+                
+            finally:
+                pass
+
+
+        #Response
         send_json_str = ujson.dumps(response)
-        logger.info('<<- send_json_str: ' + send_json_str)
+        send_b64encoded = base64.b64encode(send_json_str.encode('utf-8'))
 
-        #response
         await send({
             'type': 'http.response.start',
             'status': 200,
             'headers': [
-                [b'content-type', b'application/json'],
-                [b'content-length', str(len(send_json_str)).encode("utf-8")],
+                [b'content-type', b'text/plain'],
             ]
         })
         await send({
             'type': 'http.response.body',
-            'body': send_json_str.encode("utf-8"),
+            'body': send_b64encoded,
         })    
 
     return app
+
 
 class Server():
     def __init__(self, debug: bool = False) -> None:
@@ -170,10 +183,7 @@ class Server():
         pass
 
     async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
-        #logger.info('->> scope: ' + str(scope))
-
         assert scope["type"] in ("http", "websocket")
-        #assert scope["method"] == "POST"
 
         if scope["type"] == "websocket":
             await self.websocket(scope, receive, send)

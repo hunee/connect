@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 def function(func: typing.Callable) -> typing.Callable:
     async def decorator(*args, **kwargs) -> typing.Callable:
-        logger.info('->> async def ' + func.__module__ + '.' + func.__name__)
+        logger.info('->> ' + func.__module__ + ' - ' + func.__name__)
 
         return await func(*args, **kwargs)
 
@@ -17,7 +17,7 @@ def function(func: typing.Callable) -> typing.Callable:
 
 def function_(func: typing.Callable) -> typing.Callable:
     def decorator(*args, **kwargs) -> typing.Callable:
-        logger.info('->> def ' + func.__module__ + '.' + func.__name__)
+        logger.info('->> ' + func.__module__ + ' - ' + func.__name__)
 
         return func(*args, **kwargs)
 

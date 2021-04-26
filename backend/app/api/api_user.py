@@ -21,7 +21,7 @@ pool = aioredis.ConnectionPool.from_url(REDIS_URL, max_connections=4)
 
 #curl -d '{"api":"add_user", "args":{"type":"a", "text":"b"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
-@connect.method
+@connect.post
 #async def add_user(json_data: Any) -> typing.Callable:
 async def add_user_1(kwargs: typing.Any) -> typing.Callable:   
     async with aiohttp.ClientSession(
@@ -37,7 +37,7 @@ async def add_user_1(kwargs: typing.Any) -> typing.Callable:
 
 #curl -d '{"api":"del_user2", "args":{"type":"a", "text":"b", "trash":"true"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
 
-@connect.method
+@connect.post
 async def add_user_2(kwargs: typing.Any):
     print('API: del_user: ', args['text'])  
 
@@ -51,11 +51,11 @@ async def add_user_2(kwargs: typing.Any):
 
 
 #curl -d '{"api":"del_user", "args":{"type":"a", "text":"b", "trash":"true"}}' -H "Content-Type: application/json" -X POST http://localhost:8000
-@connect.method
+@connect.post
 #async def add_user(kwargs: typing.Any):
-async def add_user(type: typing.Any, text: typing.Any, uname: typing.Any):
+async def REQ_ADD_USER(type: typing.Any, text: typing.Any, uname: typing.Any):
     logger.info("->> type: " + str(type))
-    logger.info("->> text: " + uname)
+    #logger.info("->> text: " + uname)
     
     #logger.info('->> KWARGS: ' + str(kwargs))
 
